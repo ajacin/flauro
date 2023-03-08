@@ -106,7 +106,7 @@ const PLANTINFO = {
       origin: "South Africa",
     },
     {
-      id: 0,
+      id: 8,
       name: "name",
       genus: "genus",
       species: "species",

@@ -15,16 +15,19 @@ const PlantListItem = ({ plant }) => {
     return word.charAt(0).toUpperCase() + word.slice(1);
   };
   const formPrimaryName = () => {
-    if (plant.isNameScientific) return `${plant.name}`;
+    if (plant.isNameScientific) return `${plant.id}. ${plant.name}`;
     else
-      return `${capitalizeFirstLetter(plant?.name)} (${capitalizeFirstLetter(
-        plant?.genus
-      )} ${capitalizeFirstLetter(plant?.species)})`;
+      return ` ${plant.id}. ${capitalizeFirstLetter(
+        plant?.name
+      )} (${capitalizeFirstLetter(plant?.genus)} ${capitalizeFirstLetter(
+        plant?.species
+      )})`;
   };
   return (
     <Link
       to={`/plants/${plant.id}`}
       style={{ textDecoration: "none", color: "black" }}
+      //   state={{ plantId: plant.id }}
     >
       <ListItem>
         <ListItemAvatar>

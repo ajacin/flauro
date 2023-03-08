@@ -18,7 +18,12 @@ export default function PlantList() {
       {plantData
         .filter((each) => each.id !== 0)
         .map((eachPlantData) => {
-          return <PlantListItem plant={eachPlantData}></PlantListItem>;
+          return (
+            <PlantListItem
+              key={eachPlantData.id}
+              plant={eachPlantData}
+            ></PlantListItem>
+          );
         })}
     </List>
   );
