@@ -64,7 +64,7 @@ const PlantDetails = (props) => {
                   color="text.secondary"
                   sx={{ overflowWrap: "break-word" }}
                 >
-                  {plant.shortDescription}
+                  <p>{plant.shortDescription}</p>
                 </Typography>
                 {plant.description && (
                   <Typography variant="body2" gutterBottom>
@@ -78,21 +78,34 @@ const PlantDetails = (props) => {
                   </Typography>
                 )}
               </Grid>
-              <Grid item xs container direction="column" spacing={2}>
+              <Grid
+                item
+                xs
+                container
+                direction="column"
+                spacing={2}
+                alignItems="start"
+              >
                 <h5>Other Names:</h5>
-                {plant.commonNames &&
-                  plant.commonNames.length &&
-                  plant.commonNames.map((eachCommonName) => {
-                    return (
-                      <Typography
-                        key={eachCommonName}
-                        variant="body2"
-                        gutterBottom
-                      >
-                        {eachCommonName}
-                      </Typography>
-                    );
-                  })}
+                <ul>
+                  {plant.commonNames &&
+                    plant.commonNames.length &&
+                    plant.commonNames
+                      .filter((each) => each !== "")
+                      .map((eachCommonName) => {
+                        return (
+                          <li>
+                            <Typography
+                              key={eachCommonName}
+                              variant="body2"
+                              gutterBottom
+                            >
+                              {eachCommonName}
+                            </Typography>
+                          </li>
+                        );
+                      })}
+                </ul>
               </Grid>
             </Grid>
           </Grid>
