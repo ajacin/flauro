@@ -7,6 +7,8 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
+import QuickInfoCard from "./QuickInfoCard";
+import OtherNames from "./OtherNames";
 
 const Img = styled("img")({
   margin: "auto",
@@ -52,7 +54,7 @@ const PlantDetails = (props) => {
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1" component="div">
-                  <h3>{plant.name}</h3>
+                  <h2>{plant.name}</h2>
                 </Typography>
                 {!plant.isNameScientific && (
                   <Typography variant="body2" gutterBottom>
@@ -66,6 +68,9 @@ const PlantDetails = (props) => {
                 >
                   <p>{plant.shortDescription}</p>
                 </Typography>
+                <QuickInfoCard
+                  shortDescription={plant.shortDescription}
+                ></QuickInfoCard>
                 {plant.description && (
                   <Typography variant="body2" gutterBottom>
                     {plant.description}
@@ -78,7 +83,7 @@ const PlantDetails = (props) => {
                   </Typography>
                 )}
               </Grid>
-              <Grid
+              {/* <Grid
                 item
                 xs
                 container
@@ -106,8 +111,19 @@ const PlantDetails = (props) => {
                         );
                       })}
                 </ul>
-              </Grid>
+              </Grid> */}
             </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          spacing={2}
+          alignItems="center"
+          justifyContent="center"
+          mt={5}
+        >
+          <Grid item xs>
+            <OtherNames commonNames={plant.commonNames}></OtherNames>
           </Grid>
         </Grid>
       </Paper>
