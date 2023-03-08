@@ -8,6 +8,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import WorkIcon from "@mui/icons-material/Work";
 import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 
 const PlantListItem = ({ plant }) => {
   const capitalizeFirstLetter = (word) => {
@@ -21,27 +22,32 @@ const PlantListItem = ({ plant }) => {
       )} ${capitalizeFirstLetter(plant?.species)})`;
   };
   return (
-    <ListItem>
-      <ListItemAvatar>
-        <Avatar>
-          <Box
-            component="img"
-            sx={{
-              height: 233,
-              width: 350,
-              maxHeight: { xs: 233, md: 167 },
-              maxWidth: { xs: 350, md: 250 },
-            }}
-            alt={plant?.name}
-            src={plant?.thumbnail}
-          />
-        </Avatar>
-      </ListItemAvatar>
-      <ListItemText
-        primary={formPrimaryName()}
-        secondary={capitalizeFirstLetter(plant?.shortDescription)}
-      />
-    </ListItem>
+    <Link
+      to={`/plants/${plant.id}`}
+      style={{ textDecoration: "none", color: "black" }}
+    >
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Box
+              component="img"
+              sx={{
+                height: 233,
+                width: 350,
+                maxHeight: { xs: 233, md: 167 },
+                maxWidth: { xs: 350, md: 250 },
+              }}
+              alt={plant?.name}
+              src={plant?.thumbnail}
+            />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary={formPrimaryName()}
+          secondary={capitalizeFirstLetter(plant?.shortDescription)}
+        />
+      </ListItem>
+    </Link>
   );
 };
 
