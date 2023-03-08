@@ -10,8 +10,15 @@ import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import Box from "@mui/material/Box";
 
 const PlantListItem = ({ plant }) => {
+  const capitalizeFirstLetter = (word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  };
   const formPrimaryName = () => {
-    return `${plant.name} (${plant.genus} ${plant.species})`;
+    if (plant.isNameScientific) return `${plant.name}`;
+    else
+      return `${capitalizeFirstLetter(plant?.name)} (${capitalizeFirstLetter(
+        plant?.genus
+      )} ${capitalizeFirstLetter(plant?.species)})`;
   };
   return (
     <ListItem>
@@ -25,14 +32,14 @@ const PlantListItem = ({ plant }) => {
               maxHeight: { xs: 233, md: 167 },
               maxWidth: { xs: 350, md: 250 },
             }}
-            alt={plant.name}
-            src={plant.thumbnail}
+            alt={plant?.name}
+            src={plant?.thumbnail}
           />
         </Avatar>
       </ListItemAvatar>
       <ListItemText
         primary={formPrimaryName()}
-        secondary={plant.shortDescription}
+        secondary={capitalizeFirstLetter(plant?.shortDescription)}
       />
     </ListItem>
   );

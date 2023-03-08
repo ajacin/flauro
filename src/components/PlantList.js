@@ -15,9 +15,11 @@ export default function PlantList() {
   const [plantData, setPlantData] = useState(PLANTINFO.plantData);
   return (
     <List sx={{ width: "100%", bgcolor: "background.paper" }}>
-      {plantData.map((eachPlantData) => {
-        return <PlantListItem plant={eachPlantData}></PlantListItem>;
-      })}
+      {plantData
+        .filter((each) => each.id !== 0)
+        .map((eachPlantData) => {
+          return <PlantListItem plant={eachPlantData}></PlantListItem>;
+        })}
     </List>
   );
 }
