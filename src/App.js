@@ -3,6 +3,7 @@ import PlantDetails from "./components/PlantDetails";
 import PlantList from "./components/PlantList";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import { Routes, Route } from "react-router-dom";
+import QrCodes from "./components/QrCodes";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PlantList />} />
           <Route path="/plants/:id" element={<PlantDetails />} />
+          <Route path="/qr" element={<QrCodes />} />
         </Routes>
       </>
     </div>

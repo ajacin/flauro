@@ -14,9 +14,9 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
-// const pages = ["Products", "Pricing", "Blog"];
+const pages = ["QR Codes"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
-const pages = [];
+// const pages = [];
 const settings = [];
 
 function ResponsiveAppBar() {
@@ -39,13 +39,12 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ background: "#2E3B55" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Link to={`/`} style={{ textDecoration: "none", color: "white" }}>
             <Typography
-              variant="h6"
+              variant="h4"
               noWrap
               component="a"
               href="/"
@@ -59,10 +58,9 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              flaŭro
+              ʄlaŭro
             </Typography>
           </Link>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -93,16 +91,20 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  component={Link}
+                  to="/qr"
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Link to={`/`} style={{ textDecoration: "none", color: "white" }}>
             <Typography
-              variant="h5"
+              variant="h4"
               noWrap
               component="a"
               href=""
@@ -117,7 +119,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              flaŭro
+              ʄlaŭro
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -126,18 +128,19 @@ function ResponsiveAppBar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
+                component={Link}
+                to="/qr"
               >
                 {page}
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Flaura"
-                  src="https://imgs.search.brave.com/ypd5oqDArD97Piic2ycGZ0FB3k-jJRtPXj6QlEy4wr4/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5h/bmRyZXdrZWxzYWxs/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAwOS8xMS9saWx5/LWZsb3dlci5KUEc"
+                  src="https://cdn-icons-png.flaticon.com/512/892/892926.png"
                 />
               </IconButton>
             </Tooltip>

@@ -20,6 +20,7 @@ const PLANTINFO = {
     {
       id: 2,
       name: "Philodendron Burle Marxii",
+      shortName: "P. burle-marxii",
       genus: "Philodendron",
       species: "burle-marxii",
       isNameScientific: true,
@@ -89,6 +90,7 @@ const PLANTINFO = {
     {
       id: 6,
       name: "Thaumatophyllum Xanadu",
+      shortName: "T. Xanadu",
       genus: "Thaumatophyllum",
       species: "xanadu",
       isNameScientific: true,
@@ -181,7 +183,7 @@ const PLANTINFO = {
       species: "macrocarpa",
       isNameScientific: "FALSE",
       thumbnail:
-        "https://www.gardeningknowhow.com/ornamental/trees/cypress/lemon-cypress-care.htm",
+        "https://imgs.search.brave.com/ysFKAqnOOFjLw_cH9k-b0oFhjj2ljuZtCnyBl3ezz_U/rs:fit:736:981:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vNzM2/eC85OC85MS9kZC85/ODkxZGQ0ZjYxMGFj/NGY4ZTUyYTdkNWEw/Yzk4MGY4ZS5qcGc",
       shortDescription:
         "name from the powerful strong lemon scent that its branches exude",
       url: "https://www.gardeningknowhow.com/ornamental/trees/cypress/lemon-cypress-care.htm",
@@ -298,7 +300,7 @@ const PLANTINFO = {
     },
     {
       id: 18,
-      name: "Ficus microcarpa Moclame",
+      name: "Indian Laurel",
       genus: "Ficus",
       species: "Moclame",
       isNameScientific: "FALSE",
