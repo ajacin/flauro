@@ -21,7 +21,7 @@ export default function Facts({ facts }) {
       {facts && facts.length > 0 && (
         <Card
           sx={{
-            minWidth: 275,
+            width: "100%",
             paddingLeft: 1,
             background: "#FCFFEB",
             margin: 1,
@@ -33,7 +33,7 @@ export default function Facts({ facts }) {
               color="text.secondary"
               gutterBottom
             >
-              Some interesting facts
+              Facts / Fun / Care
             </Typography>
 
             <ul

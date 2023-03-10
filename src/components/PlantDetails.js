@@ -11,6 +11,10 @@ import ButtonBase from "@mui/material/ButtonBase";
 import QuickInfoCard from "./QuickInfoCard";
 import OtherNames from "./OtherNames";
 import Facts from "./Facts";
+import FlagIcon from "@mui/icons-material/Flag";
+import ForestIcon from "@mui/icons-material/Forest";
+import InfoIcon from "@mui/icons-material/Info";
+import { Link } from "react-router-dom";
 
 const Img = styled("img")({
   margin: "auto",
@@ -59,6 +63,7 @@ const PlantDetails = (props) => {
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1" component="div">
                   <h2>{plant.name}</h2>
+                  <ForestIcon sx={{ color: "#06D6A0" }}></ForestIcon>
                 </Typography>
                 {!plant.isNameScientific && (
                   <Typography variant="body2" gutterBottom>
@@ -82,9 +87,12 @@ const PlantDetails = (props) => {
                   </Typography>
                 )}
                 {plant.origin && plant.origin !== "xxx" && (
-                  <Typography variant="body2" gutterBottom>
-                    Origin: {plant.origin}
-                  </Typography>
+                  <>
+                    <FlagIcon sx={{ color: "#06D6A0" }}></FlagIcon>
+                    <Typography variant="body2" gutterBottom>
+                      {plant.origin}
+                    </Typography>
+                  </>
                 )}
               </Grid>
             </Grid>
@@ -96,6 +104,27 @@ const PlantDetails = (props) => {
           {/* </Grid> */}
           <Facts facts={facts}></Facts>
         </Grid>
+        {plant.url && (
+          <>
+            <Typography variant="body2" gutterBottom>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#2E3B55",
+                  color: "white",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                  padding: "5px",
+                  margin: "20px",
+                }}
+                to={plant.url}
+                target="_blank"
+              >
+                Read more
+              </Link>
+            </Typography>
+          </>
+        )}
       </Paper>
     </>
   );
