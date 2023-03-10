@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import PLANTINFO from "../data/staticData";
+import FACTINFO from "../data/staticFacts";
 import { useParams } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
@@ -9,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
 import QuickInfoCard from "./QuickInfoCard";
 import OtherNames from "./OtherNames";
+import Facts from "./Facts";
 
 const Img = styled("img")({
   margin: "auto",
@@ -21,6 +23,7 @@ const PlantDetails = (props) => {
   //const [plant, setPlant] = useState(PLANTINFO.plantData);
   let { id } = useParams();
   const [plant, setPlant] = useState(PLANTINFO.plantData[id - 1]);
+  const [facts, setFacts] = useState(FACTINFO[id - 1]);
   useEffect(() => {
     let commonNames = [
       plant.commonNames_0,
@@ -28,7 +31,7 @@ const PlantDetails = (props) => {
       plant.commonNames_2,
       plant.commonNames_3,
       plant.commonNames_4,
-    ];
+    ].filter((ele) => ele != "");
     setPlant({ ...plant, commonNames: commonNames });
   }, []);
   return (
@@ -43,6 +46,7 @@ const PlantDetails = (props) => {
           backgroundColor: (theme) =>
             theme.palette.mode === "dark" ? "#1A2027" : "#fff",
         }}
+        elevation={0}
       >
         <Grid container spacing={2} alignItems="center" justifyContent="center">
           <Grid item alignItems="center" justifyContent="center">
@@ -68,9 +72,9 @@ const PlantDetails = (props) => {
                 >
                   <p>{plant.shortDescription}</p>
                 </Typography>
-                <QuickInfoCard
+                {/* <QuickInfoCard
                   shortDescription={plant.shortDescription}
-                ></QuickInfoCard>
+                ></QuickInfoCard> */}
                 {plant.description && (
                   <Typography variant="body2" gutterBottom>
                     {plant.description}
@@ -83,48 +87,14 @@ const PlantDetails = (props) => {
                   </Typography>
                 )}
               </Grid>
-              {/* <Grid
-                item
-                xs
-                container
-                direction="column"
-                spacing={2}
-                alignItems="start"
-              >
-                <h5>Other Names:</h5>
-                <ul>
-                  {plant.commonNames &&
-                    plant.commonNames.length &&
-                    plant.commonNames
-                      .filter((each) => each !== "")
-                      .map((eachCommonName) => {
-                        return (
-                          <li>
-                            <Typography
-                              key={eachCommonName}
-                              variant="body2"
-                              gutterBottom
-                            >
-                              {eachCommonName}
-                            </Typography>
-                          </li>
-                        );
-                      })}
-                </ul>
-              </Grid> */}
             </Grid>
           </Grid>
         </Grid>
-        <Grid
-          container
-          spacing={2}
-          alignItems="center"
-          justifyContent="center"
-          mt={5}
-        >
-          <Grid item xs>
-            <OtherNames commonNames={plant.commonNames}></OtherNames>
-          </Grid>
+        <Grid container alignItems="center" justifyContent="center" mt={5}>
+          {/* <Grid item xs> */}
+          <OtherNames commonNames={plant.commonNames}></OtherNames>
+          {/* </Grid> */}
+          <Facts facts={facts}></Facts>
         </Grid>
       </Paper>
     </>

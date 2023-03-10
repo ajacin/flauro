@@ -2,12 +2,12 @@ const PLANTINFO = {
   plantData: [
     {
       id: 1,
-      name: "Rubber Fig",
+      name: "Rubber Fig burgundy",
       genus: "Ficus",
       species: "Elastica",
       isNameScientific: false,
       thumbnail:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ficus_elastica_leaves_02.JPG/220px-Ficus_elastica_leaves_02.JPG",
+        "https://i1.wp.com/www.thetutuguru.com.au/wp-content/uploads/2019/01/Rubber-fig-burgandy.jpeg",
       shortDescription: "Flowering plant",
       url: "https://en.wikipedia.org/wiki/Ficus_elastica",
       origin: "xxx",
@@ -54,7 +54,8 @@ const PLANTINFO = {
     },
     {
       id: 4,
-      name: "Peacock Plant",
+      name: "Peacock Plant Calathea",
+      shortName: "Peacock Calathea",
       genus: "Goeppertia",
       species: "makoyana",
       isNameScientific: false,
@@ -66,7 +67,7 @@ const PLANTINFO = {
       origin: "Brazil",
       commonNames_0: "peacock plant",
       commonNames_1: "cathedral windows",
-      commonNames_2: "",
+      commonNames_2: "wonderful plant",
       commonNames_3: "",
       commonNames_4: "",
     },
@@ -111,7 +112,7 @@ const PLANTINFO = {
       name: "Haworthia fasciata",
       genus: "Haworthiopsis",
       species: "fasciata",
-      isNameScientific: "TRUE",
+      isNameScientific: true,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/1_Haworthia_fasciata_-_small_plant_in_cultivation_-_CT.jpg/220px-1_Haworthia_fasciata_-_small_plant_in_cultivation_-_CT.jpg",
       shortDescription:
@@ -129,7 +130,7 @@ const PLANTINFO = {
       name: "Philodendron Birkin",
       genus: "Philodendron",
       species: "Birkin",
-      isNameScientific: "TRUE",
+      isNameScientific: true,
       thumbnail:
         "https://lifestylebotanics.files.wordpress.com/2019/07/philodendron-birkin-3.jpg",
       shortDescription: "a designer plant. Flowering plants",
@@ -145,8 +146,8 @@ const PLANTINFO = {
       id: 9,
       name: "Bougainvillea",
       genus: "Bougainvillea",
-      species: "xxx",
-      isNameScientific: "TRUE",
+      species: "<species>",
+      isNameScientific: true,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bougainvillea_closeup.jpg/220px-Bougainvillea_closeup.jpg",
       shortDescription:
@@ -164,7 +165,7 @@ const PLANTINFO = {
       name: "Zanzibar Gem",
       genus: "Zamioculcas",
       species: "zamiifolia",
-      isNameScientific: "FALSE",
+      isNameScientific: false,
       thumbnail:
         "https://www.thespruce.com/thmb/owpIXKTO6kYpcNIda3kR2PI_dAg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/zz-zanzibar-gem-plant-profile-4796783-02-e80e5506091f4dcfb226c5a21718deb6.jpg",
       shortDescription: "Thrive in many lighting conditions",
@@ -181,7 +182,7 @@ const PLANTINFO = {
       name: "Lemon Cypress",
       genus: "Cupressus",
       species: "macrocarpa",
-      isNameScientific: "FALSE",
+      isNameScientific: false,
       thumbnail:
         "https://imgs.search.brave.com/ysFKAqnOOFjLw_cH9k-b0oFhjj2ljuZtCnyBl3ezz_U/rs:fit:736:981:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vNzM2/eC85OC85MS9kZC85/ODkxZGQ0ZjYxMGFj/NGY4ZTUyYTdkNWEw/Yzk4MGY4ZS5qcGc",
       shortDescription:
@@ -199,7 +200,7 @@ const PLANTINFO = {
       name: "Poinsettia",
       genus: "Euphorbia",
       species: "pulcherrima",
-      isNameScientific: "FALSE",
+      isNameScientific: false,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Weihnachtsstern_-_gro%C3%9F.jpg/220px-Weihnachtsstern_-_gro%C3%9F.jpg",
       shortDescription: "commercially important flowering plant",
@@ -215,8 +216,8 @@ const PLANTINFO = {
       id: 13,
       name: "Cyclamen",
       genus: "Cyclamen",
-      species: "xxx",
-      isNameScientific: "TRUE",
+      species: "<species>",
+      isNameScientific: true,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wild_cyclamens.jpg/220px-Wild_cyclamens.jpg",
       shortDescription: "upswept petals and variably patterned leaves",
@@ -233,7 +234,7 @@ const PLANTINFO = {
       name: "Haworthiopsis limifolia",
       genus: "Haworthiopsis",
       species: "limifolia",
-      isNameScientific: "TRUE",
+      isNameScientific: true,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Haworthia_limifolia_-_Atlanta_Botanical_Garden.JPG/220px-Haworthia_limifolia_-_Atlanta_Botanical_Garden.JPG",
       shortDescription: "flowering plants",
@@ -250,7 +251,7 @@ const PLANTINFO = {
       name: "Aralia Variegated",
       genus: "Aralia",
       species: "Variegated",
-      isNameScientific: "TRUE",
+      isNameScientific: true,
       thumbnail:
         "https://cdn.shopify.com/s/files/1/0966/1072/products/root-bridges-foliage-plants-variegated-aralia-indoor-plant-13903845589047_500x.jpg?v=1655535983",
       shortDescription:
@@ -267,8 +268,8 @@ const PLANTINFO = {
       id: 16,
       name: "Pink Petunia",
       genus: "Petunia",
-      species: "xxx",
-      isNameScientific: "TRUE",
+      species: "<species>",
+      isNameScientific: true,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Petunia_exserta_by_Scott_Zona_-_004_%281%29.jpg/220px-Petunia_exserta_by_Scott_Zona_-_004_%281%29.jpg",
       shortDescription:
@@ -286,7 +287,7 @@ const PLANTINFO = {
       name: "Jade plant",
       genus: "Crassula",
       species: "ovata",
-      isNameScientific: "FALSE",
+      isNameScientific: false,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/A_40_year_old_jade_plant_%28Crassula_ovata%29.jpg/220px-A_40_year_old_jade_plant_%28Crassula_ovata%29.jpg",
       shortDescription: "succulent plant with small pink or white flowers",
@@ -303,7 +304,7 @@ const PLANTINFO = {
       name: "Indian Laurel",
       genus: "Ficus",
       species: "Moclame",
-      isNameScientific: "FALSE",
+      isNameScientific: false,
       thumbnail:
         "https://cdn.shopify.com/s/files/1/1706/1307/products/Ficus-Moclame-Indian-Laurel-Large_5000x.jpg?v=1669904841",
       shortDescription: "lovely, glossy oval leaves",
@@ -320,7 +321,7 @@ const PLANTINFO = {
       name: "Coleus",
       genus: "Coleus",
       species: "scutellarioides",
-      isNameScientific: "FALSE",
+      isNameScientific: false,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Coleus_scutellarioides_%28cultivars%29_-_Jardin_universitaire_Roger-Van_den_Hende%2C_Quebec_36.jpg/220px-Coleus_scutellarioides_%28cultivars%29_-_Jardin_universitaire_Roger-Van_den_Hende%2C_Quebec_36.jpg",
       shortDescription: "highly decorative variegated leaves",
@@ -336,10 +337,10 @@ const PLANTINFO = {
       id: 20,
       name: "Radiator plants",
       genus: "Peperomia",
-      species: "xxx",
-      isNameScientific: "FALSE",
+      species: "<species>",
+      isNameScientific: false,
       thumbnail:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Peperomia_trifolia_2011-01-17.jpg/220px-Peperomia_trifolia_2011-01-17.jpg",
+        "https://nestreeo.com/wp-content/uploads/2020/03/Alternanthera-Red-2-scaled.jpg",
       shortDescription: "compact perennial shrubs or vines",
       url: "https://en.wikipedia.org/wiki/Peperomia",
       origin: "South America",
@@ -353,8 +354,8 @@ const PLANTINFO = {
       id: 21,
       name: "Alternanthera",
       genus: "Alternanthera",
-      species: "xxx",
-      isNameScientific: "FALSE",
+      species: "<species>",
+      isNameScientific: false,
       thumbnail:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Starr_030523-0122_Alternanthera_pungens.jpg/220px-Starr_030523-0122_Alternanthera_pungens.jpg",
       shortDescription: "annual or perennial herbs or subshrubs",
@@ -362,6 +363,40 @@ const PLANTINFO = {
       origin: "Americas",
       commonNames_0: "joyweeds",
       commonNames_1: "Josephs coat",
+      commonNames_2: "",
+      commonNames_3: "",
+      commonNames_4: "",
+    },
+    {
+      id: 22,
+      name: "Neon Pothos",
+      genus: "Epipremnum",
+      species: "aureum",
+      isNameScientific: false,
+      thumbnail:
+        "https://peppyflora.com/wp-content/uploads/2020/10/Golden-Pothos-Golden-Money-Plant-Lime-Pothos-Peppyflora-Product-02-moz-768x614.jpg",
+      shortDescription: "It has vibrant, neon leaves that glow yellow-green",
+      url: "https://www.bybrittanygoldwyn.com/neon-pothos-care/",
+      origin: "South Pacific",
+      commonNames_0: "",
+      commonNames_1: "",
+      commonNames_2: "",
+      commonNames_3: "",
+      commonNames_4: "",
+    },
+    {
+      id: 23,
+      name: "Golden Pothos",
+      genus: "Epipremnum",
+      species: "aureum",
+      isNameScientific: false,
+      thumbnail:
+        "https://cdn.shopify.com/s/files/1/0068/4215/5090/articles/pl_GoldenPothos_8IN_po_can_1_960x.jpg?v=1661283880",
+      shortDescription: "unbelievably low-maintenance ",
+      url: "https://www.bybrittanygoldwyn.com/neon-pothos-care/",
+      origin: "South Pacific",
+      commonNames_0: "",
+      commonNames_1: "",
       commonNames_2: "",
       commonNames_3: "",
       commonNames_4: "",

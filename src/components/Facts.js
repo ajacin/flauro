@@ -5,7 +5,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import OtherNamesList from "./OtherNamesList";
 
 // const bull = (
 //   <Box
@@ -16,15 +15,15 @@ import OtherNamesList from "./OtherNamesList";
 //   </Box>
 // );
 
-export default function OtherNames({ commonNames }) {
+export default function Facts({ facts }) {
   return (
     <>
-      {commonNames && commonNames.length > 0 && (
+      {facts && facts.length > 0 && (
         <Card
           sx={{
-            width: "100%",
+            minWidth: 275,
             paddingLeft: 1,
-            background: "#F8FFF4",
+            background: "#FCFFEB",
             margin: 1,
           }}
         >
@@ -34,8 +33,9 @@ export default function OtherNames({ commonNames }) {
               color="text.secondary"
               gutterBottom
             >
-              Other Names:
+              Some interesting facts
             </Typography>
+
             <ul
               style={{
                 margin: 0,
@@ -44,13 +44,9 @@ export default function OtherNames({ commonNames }) {
                 marginLeft: 3,
               }}
             >
-              {commonNames
-                .filter((each) => each !== "")
-                .map((eachCommonName) => {
-                  return (
-                    <li style={{ margin: 0, padding: 0 }}>{eachCommonName}</li>
-                  );
-                })}
+              {facts.map((element) => {
+                return <li style={{ margin: 0, padding: 0 }}>{element}</li>;
+              })}
             </ul>
           </CardContent>
         </Card>
