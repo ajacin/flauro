@@ -175,6 +175,13 @@ const FACTINFO = [
     "well-draining potting soil  is ideal",
     "likes to have its soil dry out completely between waterings",
   ],
+  [
+    "a perennial herbaceous plant with straight stem",
+    "simple and alternate leaves containing white spots and flecks",
+    "popular for their tolerance of shade",
+    "fantastic at regenerating",
+    "good watering then to be left alone to dry out for a bit",
+  ],
 ];
 
 export default FACTINFO;
