@@ -21,10 +21,9 @@ const Img = styled("img")({
 });
 
 const PlantDetails = (props) => {
-  //const [plant, setPlant] = useState(PLANTINFO.plantData);
   let { id } = useParams();
   const [plant, setPlant] = useState(PLANTINFO.plantData[id - 1]);
-  const [facts, setFacts] = useState(FACTINFO[id - 1]);
+  const [facts] = useState(FACTINFO[id - 1]);
   useEffect(() => {
     let commonNames = [
       plant.commonNames_0,
@@ -32,9 +31,9 @@ const PlantDetails = (props) => {
       plant.commonNames_2,
       plant.commonNames_3,
       plant.commonNames_4,
-    ].filter((ele) => ele != "");
+    ].filter((ele) => ele !== "");
     setPlant({ ...plant, commonNames: commonNames });
-  }, []);
+  }, [plant]);
   return (
     <>
       <Paper
@@ -109,7 +108,6 @@ const PlantDetails = (props) => {
                   textDecoration: "none",
                   backgroundColor: "#2E3B55",
                   color: "white",
-                  textDecoration: "none",
                   fontWeight: "bold",
                   padding: "5px",
                   margin: "20px",

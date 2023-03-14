@@ -3,7 +3,7 @@ import PLANTINFO from "../data/staticData";
 import { useState } from "react";
 
 const QrCodes = () => {
-  const [plantData, setPlantData] = useState(PLANTINFO.plantData);
+  const [plantData] = useState(PLANTINFO.plantData);
   return (
     <>
       <h3>QR Codes</h3>

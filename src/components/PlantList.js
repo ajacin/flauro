@@ -4,7 +4,7 @@ import PlantListItem from "./PlantListItem";
 import PLANTINFO from "../data/staticData";
 
 export default function PlantList() {
-  const [plantData, setPlantData] = useState(PLANTINFO.plantData);
+  const [plantData] = useState(PLANTINFO.plantData);
   return (
     <List sx={{ width: "100%", bgcolor: "background.paper" }}>
       {plantData
