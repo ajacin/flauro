@@ -1,4 +1,3 @@
-import QRCode from "qrcode.react";
 import QrTile from "./QrTile";
 import PLANTINFO from "../data/staticData";
 import { useState } from "react";
