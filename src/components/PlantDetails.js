@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import PLANTINFO from "../data/staticData";
 import FACTINFO from "../data/staticFacts";
 import { useParams } from "react-router-dom";
@@ -8,12 +7,10 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
-import QuickInfoCard from "./QuickInfoCard";
 import OtherNames from "./OtherNames";
 import Facts from "./Facts";
 import FlagIcon from "@mui/icons-material/Flag";
 import ForestIcon from "@mui/icons-material/Forest";
-import InfoIcon from "@mui/icons-material/Info";
 import { Link } from "react-router-dom";
 
 const Img = styled("img")({
