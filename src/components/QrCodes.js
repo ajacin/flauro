@@ -6,7 +6,7 @@ const QrCodes = () => {
   const [plantData] = useState(PLANTINFO.plantData);
   return (
     <>
-      <h3>QR Codes</h3>
+      <h3>View QR</h3>
       {plantData
         .filter((each) => each.id !== 0)
         .map((eachPlantData) => {
